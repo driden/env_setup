@@ -22,7 +22,12 @@
     - role: dotfiles
       when: dotfiles_link | bool
 
-    - neovim
+    - role: neovim
+      when: neovim_setup
+
+    - role: languages
+      when: languages_setup | bool 
+
 
 
   tasks:

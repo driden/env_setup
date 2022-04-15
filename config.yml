@@ -1,6 +1,9 @@
 zsh_install: false
 homebrew_install: false
 dotfiles_link: false
+nvm_install: true
+neovim_setup: false
+languages_setup: true
 
 homebrew_installed_packages:
   - automake
@@ -9,7 +12,6 @@ homebrew_installed_packages:
   - cabal-install
   - cmake
   - coreutils
-  - lf
   - fd
   - fzf
   - gawk
@@ -21,6 +23,7 @@ homebrew_installed_packages:
   - haskell-stack
   - jq
   - lazygit
+  - lf
   - luajit
   - luarocks
   - neovim
@@ -54,3 +57,5 @@ homebrew_cask_apps:
   - karabiner-elements
   - kitty
   - mactex
+  - spotify
+  - visual-studio-code

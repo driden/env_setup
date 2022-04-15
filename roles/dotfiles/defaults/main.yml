@@ -3,10 +3,9 @@ dotfiles_repo: git@github.com:driden/dotfiles.git
 dotfiles_repo_local_destination: ~/dotfiles
 dotfiles_files:
  - .config
- - .doom.d
  - .hammerspoon
  - .ideavimrc
  - .tmux.conf
- - .xmonad
  - .zshrc
+ - karabiner
  - scripts

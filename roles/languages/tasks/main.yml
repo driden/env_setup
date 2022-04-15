@@ -1,0 +1,11 @@
+---
+- name: Download NVM script
+  get_url:
+    url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh 
+    dest: /tmp/install-nvm.sh
+    force: true
+    mode: '0755'
+  when: "nvm_install | bool"
+
+- name: Install 'NVM'
+  command: /tmp/install-nvm.sh 

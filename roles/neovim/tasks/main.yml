@@ -12,6 +12,3 @@
     force: false
     mode: '0755'
 
-- name: Install Plugins
-  command: nvim +PlugInstall +q
-
