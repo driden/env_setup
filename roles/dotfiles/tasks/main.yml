@@ -3,6 +3,8 @@
   git:
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_repo_local_destination }}"
+    accept_hostkey: true
+    depth: 1
   become: false
 
 - name: Ensure all configured dotfiles are links.
