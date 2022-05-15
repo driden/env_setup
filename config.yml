@@ -1,6 +1,6 @@
 zsh_install: false
 homebrew_install: false
-dotfiles_link: false
+dotfiles_link: true
 
 homebrew_installed_packages:
   - automake

@@ -1,12 +1,15 @@
 dotfiles_home: "~"
 dotfiles_repo: git@github.com:driden/dotfiles.git
-dotfiles_repo_local_destination: ~/dotfiles
+dotfiles_repo_local_destination: ~/code/dotfiles
 dotfiles_files:
- - .config
- - .doom.d
- - .hammerspoon
+ - .config/awesome
+ - .config/nvim
+ - .config/kitty
+ - .config/lazygit
+ - .config/rofi
+ - .config/karabiner
+ - .emacs.d
  - .ideavimrc
  - .tmux.conf
- - .xmonad
  - .zshrc
  - scripts
