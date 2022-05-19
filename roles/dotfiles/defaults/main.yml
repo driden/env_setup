@@ -12,5 +12,4 @@ dotfiles_files:
  - .ideavimrc
  - .tmux.conf
  - .zshrc
- - karabiner
  - scripts
