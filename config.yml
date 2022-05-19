@@ -1,9 +1,6 @@
 zsh_install: false
 homebrew_install: false
-dotfiles_link: false
-nvm_install: true
-neovim_setup: false
-languages_setup: true
+dotfiles_link: true
 
 homebrew_installed_packages:
   - automake
