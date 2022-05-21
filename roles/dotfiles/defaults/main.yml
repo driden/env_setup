@@ -8,6 +8,7 @@ dotfiles_files:
  - .config/lazygit
  - .config/rofi
  - .config/karabiner
+ - .hammerspoon
  - .emacs.d
  - .ideavimrc
  - .tmux.conf
