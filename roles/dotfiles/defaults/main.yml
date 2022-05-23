@@ -3,14 +3,16 @@ dotfiles_repo: git@github.com:driden/dotfiles.git
 dotfiles_repo_local_destination: ~/code/dotfiles
 dotfiles_files:
  - .config/awesome
- - .config/nvim
+ - .config/discord
+ - .config/karabiner
  - .config/kitty
  - .config/lazygit
+ - .config/nvim
  - .config/rofi
- - .config/karabiner
  - .hammerspoon
  - .emacs.d
  - .ideavimrc
  - .tmux.conf
  - .zshrc
+ - picom.conf
  - scripts
