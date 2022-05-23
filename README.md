@@ -4,5 +4,5 @@ Intended to work with macos and archlinux, will always be a WIP
 
 
 Needed:
- - ansible
+ - `pip install ansible`
  - `ansible-galaxy collection install geerlingguy.mac`
