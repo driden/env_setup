@@ -34,6 +34,7 @@ homebrew_installed_packages:
   - shellcheck
   - tmux
   - tree
+  - font-ubuntu-mono-nerd-font
   - wget
 
 
