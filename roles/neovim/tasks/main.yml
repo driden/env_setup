@@ -1,7 +1,7 @@
 ---
 - name: Ensure directory exists
   file:
-    path: "{{ lookup('env', 'XDG_DATA_HOME') | default('$HOME/.local/share', True) }}/nvim/site/autoload"
+    path: "{{ lookup('env','$HOME') }}/.local/share/nvim/site/autoload"
     state: directory
   register: plug_dir
 
