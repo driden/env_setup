@@ -9,7 +9,8 @@ dotfiles_files:
  - .config/rofi
  - .config/karabiner
  - .hammerspoon
- - .emacs.d
+ - .emacs.d/init.el
+ - .emacs.d/custom.el
  - .ideavimrc
  - .tmux.conf
  - .zshrc
