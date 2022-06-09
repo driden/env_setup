@@ -9,7 +9,8 @@ dotfiles_files:
  - .config/nvim
  - .config/rofi
  - .hammerspoon
- - .emacs.d
+ - .emacs.d/init.el
+ - .emacs.d/custom.el
  - .ideavimrc
  - .tmux.conf
  - .zshrc
