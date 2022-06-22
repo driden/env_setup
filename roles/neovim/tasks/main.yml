@@ -1,14 +1,9 @@
 ---
-- name: Ensure directory exists
+- name: Ensure Autoload directory exists
   file:
     path: "{{ lookup('env', 'XDG_DATA_HOME') | default('$HOME/.local/share', True) }}/nvim/site/autoload"
     state: directory
   register: plug_dir
-
-- name: Vim Plug Dir
-  debug:
-    msg: 
-      folder: "{{ plug_dir.path }}/plug.vim" 
 
 - name: Download 'Vim Plug' File
   get_url:
@@ -17,3 +12,19 @@
     force: false
     mode: '0755'
 
+- name: Ensure Paq directory exists
+  file:
+    path: "{{ lookup('env', 'XDG_DATA_HOME') | default('$HOME/.local/share', True) }}/nvim/site/pack/paqs/start/paq-nvim"
+    state: directory
+  register: paq_dir
+
+- name: debug paq dir
+  debug:
+    msg: "{{ paq_dir.path }}"
+
+- name: Download 'Paq'
+  git:
+    repo: "https://github.com/savq/paq-nvim.git"
+    dest: "{{ paq_dir.path }}"
+    accept_hostkey: true
+    depth: 1
