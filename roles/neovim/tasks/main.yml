@@ -12,19 +12,19 @@
     force: false
     mode: '0755'
 
-- name: Ensure Paq directory exists
+- name: Ensure Packer directory exists
   file:
-    path: "{{ lookup('env', 'XDG_DATA_HOME') | default('$HOME/.local/share', True) }}/nvim/site/pack/paqs/start/paq-nvim"
+    path: "{{ lookup('env', 'XDG_DATA_HOME') | default('$HOME/.local/share', True) }}/nvim/site/pack/packer/start/packer.nvim"
     state: directory
-  register: paq_dir
+  register: packer_dir
 
-- name: debug paq dir
+- name: debug packer dir
   debug:
-    msg: "{{ paq_dir.path }}"
+    msg: "{{ packer_dir.path }}"
 
-- name: Download 'Paq'
+- name: Clone 'Packer'
   git:
-    repo: "https://github.com/savq/paq-nvim.git"
-    dest: "{{ paq_dir.path }}"
+    repo: "https://github.com/wbthomason/packer.nvim"
+    dest: "{{ packer_dir.path }}"
     accept_hostkey: true
     depth: 1
