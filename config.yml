@@ -1,7 +1,6 @@
 zsh_install: false
 homebrew_install: false
 dotfiles_link: true
-neovim_setup: false
 languages_setup: false
 
 homebrew_installed_packages:
