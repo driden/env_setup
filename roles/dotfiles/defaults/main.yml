@@ -7,6 +7,7 @@ dotfiles_files:
  - .config/kitty
  - .config/lazygit
  - .config/nvim
+ - .config/ranger/rc.conf
  - .config/rofi
  - .hammerspoon
  - .emacs.d/init.el
