@@ -9,3 +9,9 @@
 
 - name: Install 'oh-my-zsh'
   command: /tmp/install-zsh.sh
+
+- name: Clone 'zsh-syntax-highlighting'
+  get_url:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: "{{ lookup('env', ZSH_CUSTOM') | default('$HOME/.oh-my-zsh/custom', True)/plugins/zsh-syntax-highlighting"
+
