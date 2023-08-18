@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  vars_files:
+    - config.yml
+
+  roles: 
+    - role: zsh
+      tags:
+        - zsh-install
