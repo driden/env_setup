@@ -6,12 +6,19 @@
     force: true
     mode: '0755'
   when: "zsh_install | bool"
+  register: zsh_install
+
+- name: Stat
+  stat:
+    path: zsh_install.dest
+  register: install_script
 
 - name: Install 'oh-my-zsh'
   command: /tmp/install-zsh.sh
+  when: install_script.stat.exists 
 
 - name: Clone 'zsh-syntax-highlighting'
-  get_url:
+  ansible.builtin.git:
     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-    dest: "{{ lookup('env', ZSH_CUSTOM') | default('$HOME/.oh-my-zsh/custom', True)/plugins/zsh-syntax-highlighting"
+    dest: "{{ lookup('env', 'ZSH_CUSTOM') | default('$HOME/.oh-my-zsh/custom', True) }}/plugins/zsh-syntax-highlighting"
 

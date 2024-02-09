@@ -1,0 +1,26 @@
+- name: Debug
+  hosts: localhost
+  tasks: 
+    - name: Download 'oh-my-zsh' installation script
+      get_url:
+        url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+        dest: /tmp/install-zsh.sh
+        force: true
+        mode: '0755'
+      register: zsh_install
+
+    - name: Stat
+      stat:
+        path: zsh_install.dest
+      register: install_script
+
+    - debug: var=install_script
+
+    - name: Install 'oh-my-zsh'
+      command: /tmp/install-zsh.sh
+      when: install_script.stat.exists 
+    #
+    # - name: Clone 'zsh-syntax-highlighting'
+    #   get_url:
+    #     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    #     dest: "{{ lookup('env', ZSH_CUSTOM') | default('$HOME/.oh-my-zsh/custom', True)/plugins/zsh-syntax-highlighting"

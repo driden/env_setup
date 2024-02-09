@@ -25,7 +25,6 @@
     - role: neovim
       when: neovim_setup
 
-
   tasks:
     - debug:
         msg: 
