@@ -1,7 +1,6 @@
 zsh_install: false
 homebrew_install: false
 dotfiles_link: true
-languages_setup: false
 
 homebrew_installed_packages:
   - automake
@@ -55,6 +54,5 @@ homebrew_cask_apps:
   - hammerspoon
   - karabiner-elements
   - kitty
-  - mactex
   - spotify
   - visual-studio-code
